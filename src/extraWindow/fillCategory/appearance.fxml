@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane fx:id="extraAnchor" prefHeight="330.0" prefWidth="550.0" style="-fx-background-color: #bcac80;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="extraWindow.fillCategory.Controller">
+   <children>
+      <TextField fx:id="categoryField" disable="true" layoutX="186.0" layoutY="26.0" prefHeight="39.0" prefWidth="335.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <Label fx:id="labelOne" layoutX="14.0" layoutY="32.0" text="Категория " textFill="#1b8ce3">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="nameField" layoutX="186.0" layoutY="90.0" prefHeight="39.0" prefWidth="335.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <Label fx:id="labelTwo" layoutX="20.0" layoutY="96.0" text="Название" textFill="#1b8ce3">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="sumField" layoutX="186.0" layoutY="217.0" prefHeight="39.0" prefWidth="277.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <Label fx:id="labelFour" layoutX="46.0" layoutY="223.0" text="Сумма" textFill="#1b8ce3">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelThree" layoutX="62.0" layoutY="160.0" text="Дата " textFill="#1b8ce3">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="dataField" layoutX="186.0" layoutY="154.0" prefHeight="39.0" prefWidth="335.0" />
+      <ImageView fitHeight="39.0" fitWidth="54.0" layoutX="475.0" layoutY="217.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../img/manat.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="warningLabel" alignment="CENTER_RIGHT" ellipsisString="" layoutX="20.0" layoutY="269.0" prefHeight="47.0" prefWidth="362.0" text="Предупреждения" textFill="#1b8ce3" wrapText="true">
+         <font>
+            <Font name="System Italic" size="14.0" />
+         </font>
+      </Label>
+      <Button layoutX="389.0" layoutY="269.0" mnemonicParsing="false" onAction="#submitFunction" prefHeight="47.0" prefWidth="131.0" style="-fx-background-color: #acba90;" text="Подтвердить" textFill="#2c52b8">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Label fx:id="labelCategory" layoutX="110.0" layoutY="32.0" prefHeight="27.0" prefWidth="70.0" text="aaa" textFill="#1b8ce3">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="110.0" layoutY="96.0" prefHeight="27.0" prefWidth="70.0" text="${labelCategory.text}" textFill="#1b8ce3">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="110.0" layoutY="160.0" prefHeight="27.0" prefWidth="70.0" text="${labelCategory.text}" textFill="#1b8ce3">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="110.0" layoutY="223.0" prefHeight="27.0" prefWidth="70.0" text="${labelCategory.text}" textFill="#1b8ce3">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

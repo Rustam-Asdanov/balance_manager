@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #546e7a;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <Label alignment="CENTER" layoutX="-1.0" prefHeight="110.0" prefWidth="600.0" style="-fx-background-color: #f6d56d;" text="Вход в систему" textAlignment="CENTER" textFill="#ea1814">
+         <font>
+            <Font name="Symbol" size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="103.0" layoutY="160.0" text="Логин" textFill="#1219e2">
+         <font>
+            <Font name="System Bold Italic" size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="96.0" layoutY="211.0" text="Пароль" textFill="#1219e2">
+         <font>
+            <Font name="System Bold Italic" size="22.0" />
+         </font>
+      </Label>
+      <Label fx:id="warningLabel" alignment="CENTER_RIGHT" layoutX="13.0" layoutY="354.0" prefHeight="32.0" prefWidth="574.0" text="внимание" textFill="#eb00dc">
+         <font>
+            <Font name="System Bold Italic" size="22.0" />
+         </font>
+      </Label>
+      <TextField fx:id="loginField" layoutX="186.0" layoutY="157.0" prefHeight="26.0" prefWidth="247.0" promptText="ваш логин">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </TextField>
+      <PasswordField fx:id="passwordField" layoutX="186.0" layoutY="208.0" prefHeight="26.0" prefWidth="247.0" promptText="ваш пароль">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </PasswordField>
+      <Button layoutX="113.0" layoutY="266.0" mnemonicParsing="false" onAction="#signInButton" style="-fx-background-color: green;" text="Войти" textOverrun="WORD_ELLIPSIS">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="235.0" layoutY="266.0" mnemonicParsing="false" onAction="#signUpButton" prefHeight="39.0" prefWidth="102.0" style="-fx-background-color: yellow;" text="Создать пользователя" textOverrun="WORD_ELLIPSIS" wrapText="true">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="361.0" layoutY="266.0" mnemonicParsing="false" onAction="#removeButton" style="-fx-background-color: red;" text="Удалить">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

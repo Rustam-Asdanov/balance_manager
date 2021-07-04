@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainAnchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #98CBDD;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="inside.Controller">
+   <children>
+      <Accordion layoutX="14.0" layoutY="22.0" />
+      <Accordion layoutX="14.0" layoutY="14.0" prefHeight="574.0" prefWidth="242.0">
+        <panes>
+          <TitledPane animated="false" text="Доход">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ListView fx:id="inList" layoutX="20.0" layoutY="14.0" prefHeight="200.0" prefWidth="200.0" />
+                        <TextField fx:id="inField" layoutX="20.0" layoutY="223.0" prefHeight="26.0" prefWidth="198.0">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </TextField>
+                        <Button layoutX="20.0" layoutY="273.0" mnemonicParsing="false" onAction="#inNewCat" prefHeight="39.0" prefWidth="198.0" text="Новая категория">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="21.0" layoutY="320.0" mnemonicParsing="false" onAction="#inNewIncome" prefHeight="39.0" prefWidth="198.0" text="Новая прибыль">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="20.0" layoutY="368.0" mnemonicParsing="false" onAction="#inChange" text="Изменить">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="126.0" layoutY="368.0" mnemonicParsing="false" onAction="#inRemove" text="Удалить">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="21.0" layoutY="416.0" mnemonicParsing="false" onAction="#inDetails" prefHeight="39.0" prefWidth="198.0" text="Подробный расчёт">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+            </content>
+               <font>
+                  <Font size="18.0" />
+               </font>
+          </TitledPane>
+          <TitledPane animated="false" text="Расходы">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ListView fx:id="outList" layoutX="20.0" layoutY="14.0" prefHeight="200.0" prefWidth="200.0" />
+                        <TextField fx:id="outField" layoutX="20.0" layoutY="223.0" prefHeight="39.0" prefWidth="201.0">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </TextField>
+                        <Button layoutX="20.0" layoutY="274.0" mnemonicParsing="false" onAction="#outNewCat" prefHeight="39.0" prefWidth="201.0" text="Новая категория">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="132.0" layoutY="371.0" mnemonicParsing="false" onAction="#outRemove" text="Удалить">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="20.0" layoutY="371.0" mnemonicParsing="false" onAction="#outChange" text="Изменить">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="20.0" layoutY="422.0" mnemonicParsing="false" onAction="#outDetails" prefHeight="39.0" prefWidth="201.0" text="Подробный расчёт">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="20.0" layoutY="321.0" mnemonicParsing="false" onAction="#outNewConsumption" prefHeight="39.0" prefWidth="204.0" text="Новый расход">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+            </content>
+               <font>
+                  <Font size="18.0" />
+               </font>
+          </TitledPane>
+          <TitledPane animated="false" text="План">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button layoutX="53.0" layoutY="242.0" mnemonicParsing="false" onAction="#planNew" text="Новый план">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="51.0" layoutY="294.0" mnemonicParsing="false" onAction="#planOld" text="Старый план">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="45.0" layoutY="341.0" mnemonicParsing="false" onAction="#planActive" text="Активный план">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <ListView fx:id="planList" layoutX="20.0" layoutY="28.0" prefHeight="200.0" prefWidth="200.0">
+                           <contextMenu>
+                              <ContextMenu>
+                                <items>
+                                  <MenuItem mnemonicParsing="false" onAction="#deleteElement" text="Удалить" />
+                                </items>
+                              </ContextMenu>
+                           </contextMenu></ListView>
+                     </children>
+                  </AnchorPane>
+            </content>
+               <font>
+                  <Font size="18.0" />
+               </font>
+          </TitledPane>
+        </panes>
+      </Accordion>
+      <AnchorPane layoutX="270.0" layoutY="50.0" prefHeight="228.0" prefWidth="514.0" style="-fx-background-color: grey;" />
+      <ListView fx:id="finalList" layoutX="270.0" layoutY="319.0" prefHeight="228.0" prefWidth="514.0" />
+      <Label layoutX="270.0" layoutY="292.0" text="Сумма:" textFill="#5fa82f">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="434.0" layoutY="291.0" text="Начало:" textFill="#5fa82f">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="632.0" layoutY="292.0" text="Конец" textFill="#5fa82f">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="354.0" layoutY="22.0" text="Баланс (Манаты)" textFill="#5fa82f">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="overall" layoutX="347.0" layoutY="292.0" text="0" textFill="#b23fbf">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="startData" layoutX="515.0" layoutY="292.0" text="дата" textFill="#b23fbf">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="endData" layoutX="693.0" layoutY="292.0" text="дата" textFill="#b23fbf">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="warning" layoutX="270.0" layoutY="560.0" prefHeight="27.0" prefWidth="514.0" text="предупреждения" textFill="#b08823">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
